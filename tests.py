@@ -9,7 +9,7 @@ from selenium import webdriver
 
 
 #default URL routing
-ROOT =  'http://127.0.0.1:8000' 
+tweetsec_eval_url =  'http://127.0.0.1:8000/tweetsec/default/evaluator' 
 
 
 
@@ -25,15 +25,7 @@ class FunctionalTest(unittest.TestCase):
     def tearDownClass(self):
         self.browser.close()
 
-    def get_response_code(self, url):
-        """Returns the response code of the given url
 
-        url     the url to check for 
-        return  the response code of the given url
-        """
-        handler = urllib2.urlopen(url)
-        return handler.getcode()
-        
         
 def run_functional_tests(pattern=None):
     print 'running tests'
