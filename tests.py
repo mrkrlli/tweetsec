@@ -1,11 +1,10 @@
 try: import unittest2 as unittest #for Python <= 2.6
 except: import unittest
-import os.path
-
-import sys, urllib2
+import os
+import sys
+sys.path.append(os.getcwd() + '/modules')
 
 from selenium import webdriver
-
 
 
 #default URL routing
