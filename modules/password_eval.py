@@ -3,12 +3,14 @@ import re
 import enchant
 
 def numerical_strength_value(password):
+	#return the calculated numerical strength of the given password string
 	replacement_password = replace_english_words(password)
 	char_types = find_char_types(replacement_password)
 	
 	return char_types * len(replacement_password)
 
 def find_char_types(password):
+	#count the total number of char types (based on the Tweetsec conditions)
 	total_count = 0
 
 	if re.search(r'[a-zA-Z]', password):
@@ -27,7 +29,7 @@ def find_char_types(password):
 
 
 def replace_english_words(password):
-	#find chunks of 1 or more alphabet letters, and replace if they fit various conditions
+	#find chunks of 1 or more alphabet letters, and replace if they fit various conditions (outline in the Tweetsec conditions)
 	password_with_replacement = re.sub(r'[a-zA-Z]+', check_letters, password)
 
 	return password_with_replacement
@@ -37,7 +39,9 @@ def check_letters(matchobj):
 	#check the letters in the substring for various conditions, and replace accordingly
 	#we will be replacing whole english words with the lower letter "p" (this will be the letter we replace that satisfies the Tweetsec condiction)
 	
-	d = enchant.Dict("en_US")
+	#the "enchat" module will allow us to check whether given strings are English words
+	d = enchant.Dict("en_US") 
+
 	if d.check(matchobj.group(0)):
 		#if whole substring is an english word, replace with "p"
 		return "p"
@@ -59,17 +63,6 @@ def check_letters(matchobj):
 				else:
 					#if it doesn't match, move the starting char offset up
 					char_offset += 1
-
-			'''
-			if d.check(matchobj.group(0)[char_offset:char_offset+x]):
-				#if it matches, replace the matched part with "p"
-				replaced_string = matchobj.group(0)[0:char_offset] + "p" + matchobj.group(0)[char_offset+x: substring_len]
-				return replaced_string
-
-			else:
-				#if it doesn't match, move the starting char offset up (until the smaller substring reaches the end of the whole substring)
-				char_
-			'''
 
 		return matchobj.group(0)
 
