@@ -3,7 +3,8 @@
 A python solution with the [Web2py](http://www.web2py.com/) framework for the TweetSec challenge (https://gist.github.com/patbenatar/069e46e6a34d65f35108)
 
 ## Code and Environment overview
-The app is start through `python web2py.py` (assuming that this app is already in the applications directory of the parent web2py folder).
+The app is run by starting web2py `python web2py.py` (assuming that this app is already in the applications directory of the parent web2py folder). There specific URL for this would be `http://127.0.0.1:8000/tweetsec/`, but there is no 
+UI made for this app besides the default UI Web2py creates for new apps.
 
 Tests are run by using `python tests.py` in the commandline. The separate test files are located in the "fts" directory. For this challenge, I have only one file (test_tweetsec.py) in the "fts" folder with all the tests.
 
