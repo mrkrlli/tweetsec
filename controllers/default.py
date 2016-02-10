@@ -15,6 +15,9 @@ def evaluator():
         password_strength = password_eval.numerical_strength_value(password)
         if password_strength >= 50:
             return "Congrats on the strong password"
+        elif password_strength <10:
+            return "Please try a better password"
+
     return
 
 def index():
