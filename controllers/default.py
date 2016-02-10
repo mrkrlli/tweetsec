@@ -13,7 +13,7 @@ def evaluator():
     if "password" in request.vars:
         password = request.vars.password
         password_strength = password_eval.numerical_strength_value(password)
-        if password_strength > 50:
+        if password_strength >= 50:
             return "Congrats on the strong password"
     return
 
