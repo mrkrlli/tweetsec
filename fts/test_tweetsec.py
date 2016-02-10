@@ -27,6 +27,22 @@ class TestTweetSecResponse(FunctionalTest):
         r = requests.post(tweetsec_eval_url, data={'password': "1"})
         self.assertEqual(r.text, "Please try a better password")
 
+    def test_tweetsec_response_unacceptable_equal_10(self):
+        #test that the tweetsec response will return the appropriate suggestion for a better password for =10 strength password
+        r = requests.post(tweetsec_eval_url, data={'password': "1234567899"})
+        self.assertEqual(r.text, "Please try a better password")
+
+
+    def test_tweetsec_response_weak_bt_10_50_no_longer(self):
+        #test that the tweetsec response will return a strong password for a weak password >10 <50, that is no longer than the original
+        r = requests.post(tweetsec_eval_url, data={'password': "1234567891234"})
+        self.assertEqual(r.text, " #a1567891234")
+
+    def test_tweetsec_response_weak_bt_10_50_make_longer(self):
+        #test that the tweetsec response will return a strong password for a weak password >10 <50, that is longer when needed
+        r = requests.post(tweetsec_eval_url, data={'password': "123456 "})
+        self.assertEqual(r.text, " #a1123456   ")
+
 class TestTweetSecNumericalStrengthValue(FunctionalTest):
 
     def test_tweetsec_numerical_strength(self):

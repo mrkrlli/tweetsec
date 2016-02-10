@@ -15,7 +15,18 @@ def evaluator():
         password_strength = password_eval.numerical_strength_value(password)
         if password_strength >= 50:
             return "Congrats on the strong password"
-        elif password_strength <10:
+        elif 10< password_strength <50:
+            #return a modified version of the password that is strong
+            if len(password)>=13:
+                #replacing the first 4 chars with 4 different char types will ensure that the pw strength is strong IF there are >= 13 chars
+                password = " #a1" + password[4:len(password)]
+            else:
+                #add 4 different char types to the beginning of the password, and add spaces at the end as necessary to reach required # of chars for strong pw
+                password = " #a1" + password + (" "* (13 - (4+len(password))))
+
+            return password
+
+        elif password_strength <= 10:
             return "Please try a better password"
 
     return
