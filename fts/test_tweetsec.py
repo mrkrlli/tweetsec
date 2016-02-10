@@ -4,12 +4,17 @@ import requests
 import password_eval
 
 
-class TestTweetSec(FunctionalTest):
+class TestTweetSecResponse(FunctionalTest):
 
     def test_tweetsec_response_code(self):
-        #test that the tweetsec URL for checking the tweet password exists
+        #test that the tweetsec response URL for giving a response for the given password, exists
         r = requests.get(tweetsec_eval_url)
         self.assertEqual(r.status_code, 200)
+
+    def test_tweetsec_response_strong_greater_50(self):
+        #test that the tweetsec response will return the appropriate congratulatory tweet for >50 strength password
+        r = requests.post(tweetsec_eval_url, data={'password': "ss  ##  99 t3a0s093js  &^"})
+        self.assertEqual(r.text, "Congrats on the strong password")
 
 class TestTweetSecNumericalStrengthValue(FunctionalTest):
 

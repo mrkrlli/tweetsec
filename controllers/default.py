@@ -7,7 +7,14 @@
 ## - user is required for authentication and authorization
 ## - download is for downloading files uploaded in the db (does streaming)
 #########################################################################
+import password_eval
+
 def evaluator():
+    if "password" in request.vars:
+        password = request.vars.password
+        password_strength = password_eval.numerical_strength_value(password)
+        if password_strength > 50:
+            return "Congrats on the strong password"
     return
 
 def index():
