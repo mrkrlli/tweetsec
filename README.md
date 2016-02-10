@@ -1,6 +1,6 @@
 # tweetsec
 
-A python solution with the Web2py framework for the TweetSec challenge (https://gist.github.com/patbenatar/069e46e6a34d65f35108)
+A python solution with the [Web2py](http://www.web2py.com/) framework for the TweetSec challenge (https://gist.github.com/patbenatar/069e46e6a34d65f35108)
 
 ## Code and Environment overview
 The app is start through `python web2py.py` (assuming that this app is already in the applications directory of the parent web2py folder).
