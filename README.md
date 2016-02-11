@@ -7,9 +7,14 @@ A python solution with the [Web2py](http://www.web2py.com/) framework for the Tw
 ### Python and pip
 This application runs on Web2py, which requires Python 2.6 or 2.7 (I'm using 2.7.3, the version of Python that comes packaged with Ubuntu 12.04). Using the Python package management system "pip" will also be very helpful to install the required Python modules.
 
-Installation of pip will vary depending on your environment. More details on installing pip here: 
+Many people recommend using (virtualenv)[https://virtualenv.readthedocs.org/en/latest/] and (virtualenvwrapper)[http://virtualenvwrapper.readthedocs.org/en/latest/index.html] to setup your Python environment, though is isn't absolutely necessary. pip is automatically installed in new environments setup by virtualenv.
+
+Installation of pip will vary depending on your environment. More details on installing pip here (if necessary): 
+
 https://pip.pypa.io/en/latest/installing/
+
 http://stackoverflow.com/questions/17271319/installing-pip-on-mac-os-x (Stack Overflow question on installing on OS X)
+
 
 ### Installing web2py 
 
@@ -43,6 +48,9 @@ Clone this repo into the the `web2py/applications` directory. Your directory str
 This application requires a few Python modules to run properly.
 
 To install the required Python modules, run `pip install -r requirements.txt` in the commandline in the tweetsec directory. This will install all the modules listed in the requirements.txt file.
+
+Note, depending on your Python environment setup, you may need `sudo pip install -r requirements.txt` if you are not using virtualenv. This is generally not recommended (http://stackoverflow.com/questions/15028648/is-it-acceptable-safe-to-run-pip-install-under-sudo).
+
 
 ### Running the Tweetsec app
 
