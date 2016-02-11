@@ -4,10 +4,12 @@ A python solution with the [Web2py](http://www.web2py.com/) framework for the Tw
 
 ## Code and Environment Overview
 
-### Installing Python and Pip
+### Python and pip
 This application runs on Web2py, which requires Python 2.6 or 2.7 (I'm using 2.7.3, the version of Python that comes packaged with Ubuntu 12.04). Using the Python package management system "pip" will also be very helpful to install the required Python modules.
 
-Installation of pip will vary depending on your environment, more details on installing pip here: https://pip.pypa.io/en/latest/installing/
+Installation of pip will vary depending on your environment. More details on installing pip here: 
+https://pip.pypa.io/en/latest/installing/
+http://stackoverflow.com/questions/17271319/installing-pip-on-mac-os-x (Stack Overflow question on installing on OS X)
 
 ### Installing web2py 
 
@@ -15,11 +17,11 @@ Instructions for installing Web2py: http://www.web2py.com/init/default/download
 
 Download the source code (http://www.web2py.com/examples/static/web2py_src.zip), and then unzip the downloaded file in the desired directory.
 
-Then run web2py with `python2.7 web2py.py` (this requires Python 2.7) from the commandline in the web2py directory.
+You can now run web2py with `python2.7 web2py.py` (this requires Python 2.7) from the commandline in the web2py directory. A window will pop up shortly after starting web2py with this command. Choose first Server IP option "Local (IPv4 (127.0.0.1)" (the default option), and set the Server Port option to "8000" (the default). Choose your password (can be anything), and then click the "start server" button.
 
 ### Installing the Tweetsec application into Web2py
 
-In the `web2py/applications` directory, create a `tweetsec` directory. Then pull the contents of this repo into the the `web2py/applications/tweetsec` directory. Your directory structure should look something like this (simplified version)
+Clone this repo into the the `web2py/applications` directory. Your directory structure should look something like this (simplified version)
  ```
  web2py/
     applications/

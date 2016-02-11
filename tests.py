@@ -16,7 +16,7 @@ class FunctionalTest(unittest.TestCase):
 
     @classmethod
     def setUpClass(self):
-        self.browser = webdriver.Chrome()
+        self.browser = webdriver.Firefox()
         self.browser.implicitly_wait(2)
 
 
