@@ -3,8 +3,39 @@
 A python solution with the [Web2py](http://www.web2py.com/) framework for the TweetSec challenge (https://gist.github.com/patbenatar/069e46e6a34d65f35108)
 
 ## Code and Environment overview
-The app is run by starting web2py `python web2py.py` (assuming that this app is already in the applications directory of the parent web2py folder). There specific URL for this would be `http://127.0.0.1:8000/tweetsec/`, but there is no 
-UI made for this app besides the default UI Web2py creates for new apps.
+
+### Installing the required Python modules
+
+
+### Installing web2py 
+
+Instructions for installing Web2py: http://www.web2py.com/init/default/download
+
+Download the source code (http://www.web2py.com/examples/static/web2py_src.zip) , and then unzip the downloaded file in the desired directory.
+
+Then run Web2py with `python web2py.py` (this requires Python 2.6 or 2.7) from the commandline in the web2py directory.
+
+### Installing the Tweetsec application into Web2py
+
+In the `web2py/applications` directory, create a `tweetsec` directory. Then pull the contents of this repo into the the `web2py/applications/tweetsec` directory. Your directory structure should look something like this (simplified version)
+ ```
+ web2py/
+    applications/
+       admin/
+       examples/
+       tweetsec/
+          controllers/
+          cron/
+          databases/
+          errors/
+          fts/
+       welcome/
+    deposit/
+    examples/
+
+ ```
+
+The app is will be started as part of Web2py when you run `python web2py.py` The specific URL for the Tweetsec app would be `http://127.0.0.1:8000/tweetsec/`, but there is no UI made for this app besides the default UI Web2py creates for new apps.
 
 Tests are run by using `python tests.py` in the commandline. The separate test files are located in the "fts" directory. For this challenge, I have only one file (test_tweetsec.py) in the "fts" folder with all the tests.
 
