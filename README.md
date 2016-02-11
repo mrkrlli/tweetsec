@@ -7,7 +7,7 @@ A python solution with the [Web2py](http://www.web2py.com/) framework for the Tw
 ### Python and pip
 This application runs on Web2py, which requires Python 2.6 or 2.7 (I'm using 2.7.3, the version of Python that comes packaged with Ubuntu 12.04). Using the Python package management system "pip" will also be very helpful to install the required Python modules.
 
-Many people recommend using (virtualenv)[https://virtualenv.readthedocs.org/en/latest/] and (virtualenvwrapper)[http://virtualenvwrapper.readthedocs.org/en/latest/index.html] to setup your Python environment, though is isn't absolutely necessary. pip is automatically installed in new environments setup by virtualenv.
+Many people recommend using [virtualenv](https://virtualenv.readthedocs.org/en/latest/) and [virtualenvwrapper](http://virtualenvwrapper.readthedocs.org/en/latest/index.html) to setup your Python environment, though is isn't absolutely necessary. pip is automatically installed in new environments setup by virtualenv.
 
 Installation of pip will vary depending on your environment. More details on installing pip here (if necessary): 
 
